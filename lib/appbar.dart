@@ -16,7 +16,7 @@ class _appbarsState extends State<appbars> {
     return Container(
       padding: EdgeInsets.fromLTRB(5.w, 0, 5.w, 0),
       width: 100.w,
-      height: 10.h,
+      height: 8.h,
       alignment: Alignment.centerLeft,
       color: Theme.of(context).colorScheme.background,
       child: Text(widget.title,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18.sp),),

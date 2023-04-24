@@ -1,3 +1,4 @@
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:ownsub/home/chartview.dart';
 import 'package:ownsub/home/homeview.dart';
@@ -20,19 +21,14 @@ class MyApp extends StatelessWidget {
     return ResponsiveSizer(
       builder: (context, orientation, screenType) {
         return MaterialApp(
-          theme: ThemeData(
-            // This is the theme of your application.
-            //
-            // Try running your application with "flutter run". You'll see the
-            // application has a blue toolbar. Then, without quitting the app, try
-            // changing the primarySwatch below to Colors.green and then invoke
-            // "hot reload" (press "r" in the console where you ran "flutter run",
-            // or simply save your changes to "hot reload" in a Flutter IDE).
-            // Notice that the counter didn't reset back to zero; the application
-            // is not restarted.
-            primarySwatch: Colors.green,
+          theme: FlexThemeData.light(scheme: FlexScheme.blueWhale,
             useMaterial3: true,
+            swapLegacyOnMaterial3: true,
           ),
+        // The Mandy red, dark theme.
+        darkTheme: FlexThemeData.dark(scheme: FlexScheme.mandyRed),
+        // Use dark or light theme based on system setting.
+        themeMode: ThemeMode.system,
           home: const homepage(),
         );
       },
@@ -57,40 +53,38 @@ class _homepageState extends State<homepage> {
   PageController pagec = new PageController();
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return  Scaffold(
         bottomNavigationBar: SalomonBottomBar(
-        currentIndex: _selectedIndex,
-        onTap: (i) {
-          setState(() {
-            pagec.initialPage;
-            pagec.jumpToPage(i);
-            _selectedIndex = i;
-          } );
-        },
-        items: [
-          SalomonBottomBarItem(
-            icon: Icon(Icons.home),
-            title: Text("Home"),
-            selectedColor: Colors.purple,
-          ),
-          SalomonBottomBarItem(
-            icon: Icon(Icons.pie_chart),
-            title: Text("Chart"),
-            selectedColor: Colors.pink,
-          ),
-          SalomonBottomBarItem(
-            icon: Icon(Icons.settings),
-            title: Text("Set"),
-            selectedColor: Colors.orange,
-          ),
-        ],
-      ),
+          currentIndex: _selectedIndex,
+          onTap: (i) {
+            setState(() {
+              pagec.initialPage;
+              pagec.jumpToPage(i);
+              _selectedIndex = i;
+            } );
+          },
+          items: [
+            SalomonBottomBarItem(
+              icon: Icon(Icons.home),
+              title: Text("Home"),
+              selectedColor: Colors.purple,
+            ),
+            SalomonBottomBarItem(
+              icon: Icon(Icons.pie_chart),
+              title: Text("Chart"),
+              selectedColor: Colors.pink,
+            ),
+            SalomonBottomBarItem(
+              icon: Icon(Icons.settings),
+              title: Text("Set"),
+              selectedColor: Colors.orange,
+            ),
+          ],
+        ),
         body: PageView(
           controller: pagec,
           children: Pagelist,
         )
-    )
     );
   }
 }
