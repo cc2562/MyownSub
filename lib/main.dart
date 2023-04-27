@@ -5,7 +5,9 @@ import 'package:ownsub/home/homeview.dart';
 import 'package:ownsub/home/my.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:intl/intl.dart';
 
+import 'generated/l10n.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -17,10 +19,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-
     return ResponsiveSizer(
       builder: (context, orientation, screenType) {
         return MaterialApp(
+          localizationsDelegates: const [
+            S.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
+          localeListResolutionCallback: (locales, supportedLocales) {
+            print(locales);
+            return;
+          },
           theme: FlexThemeData.light(scheme: FlexScheme.blueWhale,
             useMaterial3: true,
             swapLegacyOnMaterial3: true,

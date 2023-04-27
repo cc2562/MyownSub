@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:ownsub/appbar.dart';
+import 'package:ownsub/edit/selectapp.dart';
 import 'package:ownsub/lists/mainlist.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -16,6 +18,20 @@ class _homeviewState extends State<homeview> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {  
+              showBarModalBottomSheet(
+                  context: context,
+                  builder: (context){
+                   return SingleChildScrollView(
+                     controller: ModalScrollController.of(context),
+                     child: selectappview(),
+                   );
+                  }
+              );
+            },
+            child: Icon(Icons.add),
+          ),
             body: Container(
               child: Column(
                 children: [

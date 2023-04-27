@@ -1,32 +1,71 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:ownsub/edit/addnew.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-//所有信息列表
-class Alllistview extends StatefulWidget {
-  const Alllistview({Key? key}) : super(key: key);
+
+class selectlistview extends StatefulWidget {
+  const selectlistview({Key? key}) : super(key: key);
 
   @override
-  State<Alllistview> createState() => _AlllistviewState();
+  State<selectlistview> createState() => _selectlistviewState();
 }
 
-class _AlllistviewState extends State<Alllistview> {
+class _selectlistviewState extends State<selectlistview> {
   @override
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       children: [
-        alllist_body(),
-        alllist_body()
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
+        seclistbody(),
       ],
     );
   }
-//所有信息列表主体
-  Widget alllist_body(){
+
+  Widget seclistbody(){
     return Padding(
       padding: EdgeInsets.fromLTRB(0, 1.h, 0, 0),
       child: GestureDetector(
         onTap: (){
-          print("hello");
+          showBarModalBottomSheet(
+              context: context,
+              builder: (context){
+                return SingleChildScrollView(
+                  controller: ModalScrollController.of(context),
+                  child: addnewview(appdel: {},),
+                );
+              }
+          );
         },
         child: InkWell(
           child: Container(
@@ -46,8 +85,8 @@ class _AlllistviewState extends State<Alllistview> {
                     children: [
                       Container(
                         //alignment: Alignment.centerLeft,
-                        width: 6.h,
-                        height: 6.h,
+                        width: 4.h,
+                        height: 4.h,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(
@@ -56,7 +95,7 @@ class _AlllistviewState extends State<Alllistview> {
                             )
                         ),
                       ),
-                      SizedBox(width: 3.w,),
+                      SizedBox(width: 1.w,),
                       Container(
                         //height: 8.h,
                         //color: Colors.red,
@@ -65,31 +104,12 @@ class _AlllistviewState extends State<Alllistview> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("抖音",style: TextStyle(fontWeight: FontWeight.bold),),
-                            SizedBox(height: 1.w,),
-                            Text("到期时间:2023-06-11")
+                            Text("抖音",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14.sp),),
                           ],
                         ),
                       ),
                     ],
                   ),
-                  Flexible(
-                      child:
-                      Container(
-                        //height: 8.h,
-                        padding: EdgeInsets.fromLTRB(0, 0, 2.w, 0),
-                        alignment: Alignment.centerRight,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("¥15.00",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16.sp),),
-                            SizedBox(height: 1.w,),
-                            Text("4天后自动续费")
-                          ],
-                        ),
-                      )
-                  )
                 ],
               )
           ),
@@ -98,4 +118,3 @@ class _AlllistviewState extends State<Alllistview> {
     );
   }
 }
-
