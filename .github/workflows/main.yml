@@ -50,13 +50,6 @@ jobs:
           name: release-aab
           path: build/app/outputs/apk/release/app-release.apk
           
-      - name: Download APK from build
-        uses: actions/download-artifact@v2
-        with:
-          name: apk
-      - name: Display structure of downloaded files
-        run: ls -R
-
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1.1.4
@@ -71,7 +64,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          upload_url: build/app/outputs/apk/release/app-release.apk
           asset_path: ./app-release.apk
           asset_name: app-release.apk
           asset_content_type: application/zip
