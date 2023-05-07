@@ -6,10 +6,13 @@ import 'package:ownsub/home/homeview.dart';
 import 'package:ownsub/home/my.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import 'package:intl/intl.dart';
-
+import 'package:sqflite/sqflite.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'generated/l10n.dart';
 void main() {
+  // Initialize FFI
+  sqfliteFfiInit();
+  databaseFactory = databaseFactoryFfi;
   runApp(const MyApp());
 }
 final FocusNode _nodeText1 = FocusNode();
@@ -79,17 +82,17 @@ class _homepageState extends State<homepage> {
           items: [
             SalomonBottomBarItem(
               icon: Icon(Icons.home),
-              title: Text(S.of(context).day),
+              title: Text(S.of(context).home),
               selectedColor: Colors.purple,
             ),
             SalomonBottomBarItem(
               icon: Icon(Icons.pie_chart),
-              title: Text("Chart"),
+              title: Text(S.of(context).chart),
               selectedColor: Colors.pink,
             ),
             SalomonBottomBarItem(
               icon: Icon(Icons.settings),
-              title: Text("Set"),
+              title: Text(S.of(context).Set),
               selectedColor: Colors.orange,
             ),
           ],

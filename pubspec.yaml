@@ -46,6 +46,9 @@ dependencies:
   icons_plus: ^4.0.0
   wechat_assets_picker: ^8.4.2
   keyboard_actions: ^4.2.0
+  sqflite: ^2.2.8+1
+  path: ^1.8.2
+  path_provider: ^2.0.14
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +61,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  sqflite_common_ffi: any
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -100,5 +104,288 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  assets:
+    - lib/
+    - lib/sql/
+    - lib/edit/
+    - lib/home/
+    - lib/l10n/
+    - lib/lists/
+    - lib/widgets/
+    - lib/generated/
+    - lib/generated/intl/
+    - ios/
+    - ios/Pods/
+    - ios/Pods/FMDB/
+    - ios/Pods/FMDB/src/
+    - ios/Pods/FMDB/src/fmdb/
+    - ios/Pods/Headers/
+    - ios/Pods/Local Podspecs/
+    - ios/Pods/Pods.xcodeproj/
+    - ios/Pods/Pods.xcodeproj/xcuserdata/
+    - ios/Pods/Pods.xcodeproj/xcuserdata/mifancc.xcuserdatad/
+    - ios/Pods/Pods.xcodeproj/xcuserdata/mifancc.xcuserdatad/xcschemes/
+    - ios/Pods/Target Support Files/
+    - ios/Pods/Target Support Files/FMDB/
+    - ios/Pods/Target Support Files/Flutter/
+    - ios/Pods/Target Support Files/sqflite/
+    - ios/Pods/Target Support Files/Pods-Runner/
+    - ios/Pods/Target Support Files/photo_manager/
+    - ios/Pods/Target Support Files/path_provider_foundation/
+    - ios/Pods/Target Support Files/video_player_avfoundation/
+    - ios/Runner/
+    - ios/Runner/Base.lproj/
+    - ios/Runner/zh-Hans.lproj/
+    - ios/Runner/Assets.xcassets/
+    - ios/Runner/Assets.xcassets/AppIcon.appiconset/
+    - ios/Runner/Assets.xcassets/LaunchImage.imageset/
+    - ios/Flutter/
+    - ios/en.lproj/
+    - ios/.symlinks/
+    - ios/.symlinks/plugins/
+    - ios/.symlinks/plugins/sqflite/
+    - ios/.symlinks/plugins/sqflite/doc/
+    - ios/.symlinks/plugins/sqflite/ios/
+    - ios/.symlinks/plugins/sqflite/ios/Classes/
+    - ios/.symlinks/plugins/sqflite/lib/
+    - ios/.symlinks/plugins/sqflite/lib/src/
+    - ios/.symlinks/plugins/sqflite/lib/src/mixin/
+    - ios/.symlinks/plugins/sqflite/lib/utils/
+    - ios/.symlinks/plugins/sqflite/test/
+    - ios/.symlinks/plugins/sqflite/macos/
+    - ios/.symlinks/plugins/sqflite/macos/Classes/
+    - ios/.symlinks/plugins/sqflite/android/
+    - ios/.symlinks/plugins/sqflite/android/src/
+    - ios/.symlinks/plugins/sqflite/android/src/main/
+    - ios/.symlinks/plugins/sqflite/android/src/main/java/
+    - ios/.symlinks/plugins/sqflite/android/src/main/java/com/
+    - ios/.symlinks/plugins/sqflite/android/src/main/java/com/tekartik/
+    - ios/.symlinks/plugins/sqflite/android/src/main/java/com/tekartik/sqflite/
+    - ios/.symlinks/plugins/sqflite/android/src/main/java/com/tekartik/sqflite/dev/
+    - ios/.symlinks/plugins/sqflite/android/src/main/java/com/tekartik/sqflite/operation/
+    - ios/.symlinks/plugins/sqflite/android/src/test/
+    - ios/.symlinks/plugins/sqflite/android/src/test/java/
+    - ios/.symlinks/plugins/sqflite/android/src/test/java/com/
+    - ios/.symlinks/plugins/sqflite/android/src/test/java/com/tekartik/
+    - ios/.symlinks/plugins/sqflite/android/src/test/java/com/tekartik/sqflite/
+    - ios/.symlinks/plugins/sqflite/android/gradle/
+    - ios/.symlinks/plugins/sqflite/android/gradle/wrapper/
+    - ios/.symlinks/plugins/sqflite/example/
+    - ios/.symlinks/plugins/sqflite/example/lib/
+    - ios/.symlinks/plugins/sqflite/example/lib/src/
+    - ios/.symlinks/plugins/sqflite/example/lib/model/
+    - ios/.symlinks/plugins/sqflite/example/lib/database/
+    - ios/.symlinks/plugins/sqflite/example/test/
+    - ios/.symlinks/plugins/sqflite/example/test/main/
+    - ios/.symlinks/plugins/sqflite/example/tool/
+    - ios/.symlinks/plugins/sqflite/example/assets/
+    - ios/.symlinks/plugins/sqflite/example/android/
+    - ios/.symlinks/plugins/sqflite/example/android/app/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/main/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/main/res/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/main/res/values/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/main/res/drawable/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/main/res/drawable-v21/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/main/res/values-night/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/main/java/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/main/java/com/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/main/java/com/tekartik/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/main/java/com/tekartik/sqfliteexample/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/debug/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/profile/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/androidTest/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/androidTest/java/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/androidTest/java/com/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/androidTest/java/com/tekartik/
+    - ios/.symlinks/plugins/sqflite/example/android/app/src/androidTest/java/com/tekartik/sqflite/
+    - ios/.symlinks/plugins/sqflite/example/android/gradle/
+    - ios/.symlinks/plugins/sqflite/example/android/gradle/wrapper/
+    - ios/.symlinks/plugins/sqflite/example/test_driver/
+    - ios/.symlinks/plugins/sqflite/example/integration_test/
+    - ios/.symlinks/plugins/photo_manager/
+    - ios/.symlinks/plugins/photo_manager/ios/
+    - ios/.symlinks/plugins/photo_manager/ios/Classes/
+    - ios/.symlinks/plugins/photo_manager/ios/Classes/core/
+    - ios/.symlinks/plugins/photo_manager/lib/
+    - ios/.symlinks/plugins/photo_manager/lib/src/
+    - ios/.symlinks/plugins/photo_manager/lib/src/types/
+    - ios/.symlinks/plugins/photo_manager/lib/src/utils/
+    - ios/.symlinks/plugins/photo_manager/lib/src/filter/
+    - ios/.symlinks/plugins/photo_manager/lib/src/filter/custom/
+    - ios/.symlinks/plugins/photo_manager/lib/src/filter/classical/
+    - ios/.symlinks/plugins/photo_manager/lib/src/internal/
+    - ios/.symlinks/plugins/photo_manager/lib/src/managers/
+    - ios/.symlinks/plugins/photo_manager/log/
+    - ios/.symlinks/plugins/photo_manager/log/iOS/
+    - ios/.symlinks/plugins/photo_manager/log/android/
+    - ios/.symlinks/plugins/photo_manager/test/
+    - ios/.symlinks/plugins/photo_manager/test/internal/
+    - ios/.symlinks/plugins/photo_manager/macos/
+    - ios/.symlinks/plugins/photo_manager/macos/Classes/
+    - ios/.symlinks/plugins/photo_manager/macos/Classes/core/
+    - ios/.symlinks/plugins/photo_manager/android/
+    - ios/.symlinks/plugins/photo_manager/android/src/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/photo_manager/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/photo_manager/core/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/photo_manager/core/cache/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/photo_manager/core/utils/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/photo_manager/core/entity/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/photo_manager/core/entity/filter/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/photo_manager/util/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/photo_manager/thumb/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/photo_manager/constant/
+    - ios/.symlinks/plugins/photo_manager/android/src/main/kotlin/com/fluttercandies/photo_manager/permission/
+    - ios/.symlinks/plugins/photo_manager/android/gradle/
+    - ios/.symlinks/plugins/photo_manager/android/gradle/wrapper/
+    - ios/.symlinks/plugins/photo_manager/example/
+    - ios/.symlinks/plugins/photo_manager/example/ios/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner/Base.lproj/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner/Assets.xcassets/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Flutter/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner.xcodeproj/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner.xcodeproj/xcshareddata/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner.xcodeproj/project.xcworkspace/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner.xcworkspace/
+    - ios/.symlinks/plugins/photo_manager/example/ios/Runner.xcworkspace/xcshareddata/
+    - ios/.symlinks/plugins/photo_manager/example/lib/
+    - ios/.symlinks/plugins/photo_manager/example/lib/page/
+    - ios/.symlinks/plugins/photo_manager/example/lib/page/developer/
+    - ios/.symlinks/plugins/photo_manager/example/lib/page/developer/ios/
+    - ios/.symlinks/plugins/photo_manager/example/lib/page/developer/android/
+    - ios/.symlinks/plugins/photo_manager/example/lib/page/developer/issues_page/
+    - ios/.symlinks/plugins/photo_manager/example/lib/page/custom_filter/
+    - ios/.symlinks/plugins/photo_manager/example/lib/util/
+    - ios/.symlinks/plugins/photo_manager/example/lib/model/
+    - ios/.symlinks/plugins/photo_manager/example/lib/widget/
+    - ios/.symlinks/plugins/photo_manager/example/lib/widget/dialog/
+    - ios/.symlinks/plugins/photo_manager/example/macos/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner/Configs/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner/Base.lproj/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner/Assets.xcassets/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Flutter/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner.xcodeproj/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner.xcodeproj/xcshareddata/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner.xcodeproj/xcshareddata/xcschemes/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner.xcodeproj/project.xcworkspace/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner.xcworkspace/
+    - ios/.symlinks/plugins/photo_manager/example/macos/Runner.xcworkspace/xcshareddata/
+    - ios/.symlinks/plugins/photo_manager/example/android/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/res/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/res/values/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/res/drawable/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/res/mipmap-hdpi/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/res/mipmap-mdpi/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/res/drawable-v21/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/res/mipmap-xhdpi/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/res/values-night/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/res/mipmap-xxhdpi/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/res/mipmap-xxxhdpi/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/kotlin/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/kotlin/com/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/kotlin/com/fluttercandies/
+    - ios/.symlinks/plugins/photo_manager/example/android/app/src/main/kotlin/com/fluttercandies/photo_manager_example/
+    - ios/.symlinks/plugins/photo_manager/example/android/gradle/
+    - ios/.symlinks/plugins/photo_manager/example/android/gradle/wrapper/
+    - ios/.symlinks/plugins/photo_manager/flow_chart/
+    - ios/.symlinks/plugins/path_provider_foundation/
+    - ios/.symlinks/plugins/path_provider_foundation/ios/
+    - ios/.symlinks/plugins/path_provider_foundation/ios/Classes/
+    - ios/.symlinks/plugins/path_provider_foundation/lib/
+    - ios/.symlinks/plugins/path_provider_foundation/test/
+    - ios/.symlinks/plugins/path_provider_foundation/macos/
+    - ios/.symlinks/plugins/path_provider_foundation/macos/Classes/
+    - ios/.symlinks/plugins/path_provider_foundation/darwin/
+    - ios/.symlinks/plugins/path_provider_foundation/darwin/Classes/
+    - ios/.symlinks/plugins/path_provider_foundation/darwin/RunnerTests/
+    - ios/.symlinks/plugins/path_provider_foundation/example/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner/Base.lproj/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner/Assets.xcassets/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Flutter/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner.xcodeproj/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner.xcodeproj/xcshareddata/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner.xcodeproj/project.xcworkspace/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner.xcworkspace/
+    - ios/.symlinks/plugins/path_provider_foundation/example/ios/Runner.xcworkspace/xcshareddata/
+    - ios/.symlinks/plugins/path_provider_foundation/example/lib/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Runner/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Runner/Configs/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Runner/Base.lproj/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Runner/Assets.xcassets/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Flutter/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/RunnerTests/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Runner.xcodeproj/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Runner.xcodeproj/xcshareddata/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Runner.xcodeproj/xcshareddata/xcschemes/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Runner.xcworkspace/
+    - ios/.symlinks/plugins/path_provider_foundation/example/macos/Runner.xcworkspace/xcshareddata/
+    - ios/.symlinks/plugins/path_provider_foundation/example/test_driver/
+    - ios/.symlinks/plugins/path_provider_foundation/example/integration_test/
+    - ios/.symlinks/plugins/path_provider_foundation/pigeons/
+    - ios/.symlinks/plugins/video_player_avfoundation/
+    - ios/.symlinks/plugins/video_player_avfoundation/ios/
+    - ios/.symlinks/plugins/video_player_avfoundation/ios/Classes/
+    - ios/.symlinks/plugins/video_player_avfoundation/lib/
+    - ios/.symlinks/plugins/video_player_avfoundation/lib/src/
+    - ios/.symlinks/plugins/video_player_avfoundation/test/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner/Base.lproj/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner/Assets.xcassets/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Flutter/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/RunnerTests/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/RunnerUITests/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner.xcodeproj/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner.xcodeproj/xcshareddata/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner.xcodeproj/project.xcworkspace/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner.xcworkspace/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/ios/Runner.xcworkspace/xcshareddata/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/lib/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/assets/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/test_driver/
+    - ios/.symlinks/plugins/video_player_avfoundation/example/integration_test/
+    - ios/.symlinks/plugins/video_player_avfoundation/pigeons/
+    - ios/zh-Hans.lproj/
+    - ios/Runner.xcodeproj/
+    - ios/Runner.xcodeproj/xcshareddata/
+    - ios/Runner.xcodeproj/xcshareddata/xcschemes/
+    - ios/Runner.xcodeproj/project.xcworkspace/
+    - ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/
+    - ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+    - ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration/
+    - ios/Runner.xcworkspace/
+    - ios/Runner.xcworkspace/xcuserdata/
+    - ios/Runner.xcworkspace/xcuserdata/mifancc.xcuserdatad/
+    - ios/Runner.xcworkspace/xcshareddata/
+    - ios/Runner.xcworkspace/xcshareddata/swiftpm/
+    - ios/Runner.xcworkspace/xcshareddata/swiftpm/configuration/
+
 flutter_intl:
   enabled: true

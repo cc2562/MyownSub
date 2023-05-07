@@ -2,6 +2,7 @@ import 'package:date_format/date_format.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:ownsub/sql/mainsql.dart';
 import '/generated/l10n.dart' as SS1;
 import 'package:keyboard_actions/keyboard_actions.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
@@ -400,7 +401,9 @@ class _addnewviewState extends State<addnewview> {
       "startdate":_selectedDate,
       "enddate":_endDate,
     };
-    Navigator.of(context).pop(result1);
+    app_data appdata = app_data(nowappname, "123", _selectedDate.millisecondsSinceEpoch.toString(), _endDate.millisecondsSinceEpoch.toString(),  _selectedDate.millisecondsSinceEpoch.toString(), freetrailday.toString(), "", nowpayid, nowtypeid,"190", id: 1);
+    addnewapp(appdata);
+    //Navigator.of(context).pop(result1);
   }
   //付费周期判断
  String checkpay(int index){
