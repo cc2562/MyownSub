@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Runner
+
+  Created by 米饭 CC on 28/4/2023.
+  
+*/
+"NSPhotoLibraryUsageDescription" = "获取照片权限以从图库中选择图标";

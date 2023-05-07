@@ -1,0 +1,10 @@
+{
+  "day":"天",
+  "ss1": "123",
+  "weekpay": "周付",
+  "mobthpay":"月付",
+  "quarterly_payment": "季付",
+  "semi_annual_payment":"半年付",
+  "annual_fee": "年付",
+  "permanent":"永久"
+}

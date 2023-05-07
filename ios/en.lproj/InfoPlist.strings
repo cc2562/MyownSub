@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Runner
+
+  Created by 米饭 CC on 28/4/2023.
+  
+*/
+"NSPhotoLibraryUsageDescription" = "Use it to select app icon in photos";

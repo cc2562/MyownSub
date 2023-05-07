@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:keyboard_actions/keyboard_actions.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:ownsub/edit/addnew.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -56,16 +57,23 @@ class _selectlistviewState extends State<selectlistview> {
     return Padding(
       padding: EdgeInsets.fromLTRB(0, 1.h, 0, 0),
       child: GestureDetector(
+
         onTap: (){
+          final FocusNode _nodeText1 = FocusNode();
           showBarModalBottomSheet(
+            enableDrag: true,
               context: context,
               builder: (context){
-                return SingleChildScrollView(
-                  controller: ModalScrollController.of(context),
+                return Container(
+                  width: 100.w,
+                  height: 100.h,
                   child: addnewview(appdel: {},),
                 );
               }
-          );
+          ).then((value) {
+            print(value.toString());
+            Navigator.of(context).pop();
+          });
         },
         child: InkWell(
           child: Container(

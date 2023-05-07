@@ -49,6 +49,116 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `day`
+  String get day {
+    return Intl.message(
+      'day',
+      name: 'day',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `123`
+  String get ss1 {
+    return Intl.message(
+      '123',
+      name: 'ss1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chart`
+  String get chart {
+    return Intl.message(
+      'Chart',
+      name: 'chart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get Set {
+    return Intl.message(
+      'Settings',
+      name: 'Set',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `per week`
+  String get weekpay {
+    return Intl.message(
+      'per week',
+      name: 'weekpay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `per month`
+  String get mobthpay {
+    return Intl.message(
+      'per month',
+      name: 'mobthpay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `each quarter`
+  String get quarterly_payment {
+    return Intl.message(
+      'each quarter',
+      name: 'quarterly_payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `every half year`
+  String get semi_annual_payment {
+    return Intl.message(
+      'every half year',
+      name: 'semi_annual_payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `per year`
+  String get annual_fee {
+    return Intl.message(
+      'per year',
+      name: 'annual_fee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `permanent`
+  String get permanent {
+    return Intl.message(
+      'permanent',
+      name: 'permanent',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -57,6 +167,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'zh'),
     ];
   }
 

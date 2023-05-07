@@ -21,5 +21,19 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Set": MessageLookupByLibrary.simpleMessage("Settings"),
+        "annual_fee": MessageLookupByLibrary.simpleMessage("per year"),
+        "chart": MessageLookupByLibrary.simpleMessage("Chart"),
+        "day": MessageLookupByLibrary.simpleMessage("day"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "mobthpay": MessageLookupByLibrary.simpleMessage("per month"),
+        "permanent": MessageLookupByLibrary.simpleMessage("permanent"),
+        "quarterly_payment":
+            MessageLookupByLibrary.simpleMessage("each quarter"),
+        "semi_annual_payment":
+            MessageLookupByLibrary.simpleMessage("every half year"),
+        "ss1": MessageLookupByLibrary.simpleMessage("123"),
+        "weekpay": MessageLookupByLibrary.simpleMessage("per week")
+      };
 }

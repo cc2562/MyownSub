@@ -1,5 +1,6 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:ownsub/home/chartview.dart';
 import 'package:ownsub/home/homeview.dart';
 import 'package:ownsub/home/my.dart';
@@ -11,7 +12,7 @@ import 'generated/l10n.dart';
 void main() {
   runApp(const MyApp());
 }
-
+final FocusNode _nodeText1 = FocusNode();
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -24,6 +25,9 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           localizationsDelegates: const [
             S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate
           ],
           supportedLocales: S.delegate.supportedLocales,
           localeListResolutionCallback: (locales, supportedLocales) {
@@ -75,7 +79,7 @@ class _homepageState extends State<homepage> {
           items: [
             SalomonBottomBarItem(
               icon: Icon(Icons.home),
-              title: Text("Home"),
+              title: Text(S.of(context).day),
               selectedColor: Colors.purple,
             ),
             SalomonBottomBarItem(

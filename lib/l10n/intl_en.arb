@@ -1,1 +1,13 @@
-{}
+{
+  "day": "day",
+  "ss1": "123",
+  "home":"Home",
+  "chart": "Chart",
+  "Set": "Settings",
+  "weekpay": "per week",
+  "mobthpay":"per month",
+  "quarterly_payment": "each quarter",
+  "semi_annual_payment":"every half year",
+  "annual_fee": "per year",
+  "permanent":"permanent"
+}
