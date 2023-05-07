@@ -33,7 +33,6 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     compileSdkVersion 33
-    ndkVersion 33
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
