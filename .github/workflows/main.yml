@@ -17,8 +17,9 @@ jobs:
       - name: Setup Java to compile Android project
         uses: actions/setup-java@v1
         with:
-          java-version: "12.x"
-
+          java-version: "18.x"
+      - name: Kotlint
+        uses: TheFabbiusCorp/gha-kotlin-linter@v1.1
       - name: Install and set Flutter version
         uses: subosito/flutter-action@v2
         with:
@@ -45,3 +46,8 @@ jobs:
         with:
           name: release-aab
           path: build/app/outputs/apk/release/app-release.apk
+          
+          
+          
+          
+
