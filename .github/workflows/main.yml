@@ -20,6 +20,10 @@ jobs:
           java-version: "18.x"
       - name: Kotlint
         uses: TheFabbiusCorp/gha-kotlin-linter@v1.1
+      - uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r25c
+      - run: ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk NDK_APPLICATION_MK=./Application.mk
       - name: Install and set Flutter version
         uses: subosito/flutter-action@v2
         with:
