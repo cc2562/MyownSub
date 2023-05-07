@@ -386,6 +386,7 @@ flutter:
     - ios/Runner.xcworkspace/xcshareddata/
     - ios/Runner.xcworkspace/xcshareddata/swiftpm/
     - ios/Runner.xcworkspace/xcshareddata/swiftpm/configuration/
+    - README.md
 
 flutter_intl:
   enabled: true
